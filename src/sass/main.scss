@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    height: 20vh;
+    background: linear-gradient(to right, #ff1111, #ff0606);
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    border-bottom: solid #fff;
+
+    .nav_one {
+        ul {
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            li {
+                color: #fff;
+                cursor: pointer;
+                margin: 30px;
+                font-family: Redressed, 'Courier New', Courier, monospace;
+                font-weight: 500;
+                font-size: 35px;
+                list-style: none;
+
+                &:hover {
+                    transition: 0.7s;
+                    font-size: 38px;
+                }
+            }
+        }
+    }
+
+    .nav_two {
+        display: grid;
+        place-items: center;
+        position: relative;
+
+        .search {
+            position: relative;
+            border: solid #fff;
+            margin: 20px;
+            outline: none;
+            height: 40px;
+            width: 300px;
+            border-radius: 20px;
+            font-size: 100%;
+        }
+
+        .search_img {
+            height: 20%;
+            margin-left: 250px;
+            cursor: pointer;
+            position: absolute;
+        }
+    }
+};
+
+
+.navbar_two {
+    height: 15vh;
+    background-color: #ffffff;
+    border-bottom: solid #fff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
+    ul {
+        height: 100%;
+        width: 100vw;
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+
+        li {
+            margin: 20px;
+            height: 50%;
+            display: grid;
+            place-items: center;
+            background-color: #f5a9a95e;
+            cursor: pointer;
+            border-radius: 20px;
+            font-size: 20px;
+            font-family: monospace, cursive;
+            padding: 10px;
+            border: solid #ffffff;
+            list-style: none;
+            color: #aa1c1c;
+            font-weight: 900;
+        }
+    }
+}
