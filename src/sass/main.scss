@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
 
 * {
     margin: 0;
@@ -8,12 +10,15 @@
 
 .navbar {
     height: 20vh;
+    width: 100vw;
     background: linear-gradient(to right, #ff1111, #ff0606);
     display: grid;
     grid-template-columns: 3fr 1fr;
     border-bottom: solid #fff;
+    padding: 5px;
 
     .nav_one {
+
         ul {
             height: 100%;
             display: flex;
@@ -27,10 +32,16 @@
                 font-weight: 500;
                 font-size: 35px;
                 list-style: none;
+                padding: 10px;
+                border: solid #ff0000;
+                border-radius: 20px;
 
                 &:hover {
                     transition: 0.7s;
                     font-size: 38px;
+                    border: solid #fff;
+                    border-radius: 20px;
+                    background-color: red;
                 }
             }
         }
@@ -63,10 +74,11 @@
 
 
 .navbar_two {
+    width: 100vw;
     height: 15vh;
     background-color: #ffffff;
     border-bottom: solid #fff;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(202, 199, 199, 0.3) 0px 30px 60px -30px;
 
     ul {
         height: 100%;
@@ -83,12 +95,78 @@
             cursor: pointer;
             border-radius: 20px;
             font-size: 20px;
-            font-family: monospace, cursive;
+            font-family: Fredoka One, monospace, cursive;
             padding: 10px;
             border: solid #ffffff;
             list-style: none;
-            color: #aa1c1c;
+            color: #c71212;
             font-weight: 900;
+
+            &:hover {
+                transition: 0.7s;
+                border: solid #ff0000bb;
+            }
         }
     }
+}
+
+.main_div {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+
+    .main_one {
+        
+
+        .intro-img {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px;
+            padding: 5px;
+
+            .women-one {
+                height: 10rem;
+                border: solid 5px #c72525;
+                border-radius: 100px;
+            }
+
+            h1 {
+                cursor: pointer;
+                font-size: 3rem;
+                font-family: Fredoka One;
+                margin: 10px;
+            }
+        }
+
+        h2 {
+            cursor: pointer;
+            font-family: Fredoka One;
+        }
+
+        .author {
+            cursor: pointer;
+            color:#db0e0eaf;
+            border-bottom: solid 2px #ff0606;
+        }
+
+        p {
+            font-family: Fredoka One;
+            font-size: 19px;
+            line-height: 30px;
+        }
+    }
+
+    .main_two {
+        margin: 10px;
+
+        .newsletter-img {
+            height: 10rem;
+            border-radius: 20px;
+        }
+
+        .newsletter-text {
+            font-family: Fredoka One;
+        }
+    }
+
 }
