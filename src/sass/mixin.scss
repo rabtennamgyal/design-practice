@@ -26,5 +26,11 @@
             @content;
         }
     }
+
+    @if $breakpoint == desk {
+        @media (min-width: 1313px) and (max-width: 1500px) {
+            @content;
+        }
+    }
 };
 
