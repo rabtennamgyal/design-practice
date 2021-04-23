@@ -1,6 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
 @import 'mixin';
 
 
@@ -436,7 +437,7 @@ body {
 
 
 .sec-one {
-    background-color: #ebebeb;
+    background-color: #fff;
     min-height: 100vh;
     max-height: auto;
     width: 100%;
@@ -560,11 +561,192 @@ body {
 }
 
 .sec-two {
+    display: grid;
+    place-items: center;
     min-height: 100vh;
     max-height: auto;
     width: 100%;
     background-color: #097cff;
 
+    @include respond(phone) {
+        min-height: 40vh;
+        max-height: 40vh;
+    }
+
+    @include respond(tab-port) {
+        min-height: 60vh;
+        max-height: 60vh;
+    }
+
+    h1 {
+        display: grid;
+        place-items: center;
+        font-size: 4rem;
+        font-family: Paytone One;
+        color: #fff;
+        text-shadow: 1px 1px 2px pink;
+        cursor: pointer;
+
+        @include respond(phone) {
+            font-size: 1.4rem;
+            padding: 0rem 1rem;
+        }
+
+        @include respond(tab-port) {
+            font-size: 3.6rem;
+            padding: 0rem 1rem;
+        }
+    }
+
+    h3 {
+        cursor: pointer;
+        display: grid;
+        place-items: center;
+        font-size: 3rem;
+        padding: 5rem;
+        text-shadow: #FC0 1px 0 10px;
+
+        @include respond(phone) {
+            font-size: 1.5rem;
+            padding: 1rem;
+        }
+    }
+
+    .btn {
+        display: grid;
+        place-items: center;
+
+        @include respond(phone) {
+            padding: 1rem;
+        }
+
+        button {
+            cursor: pointer;
+            background-color: #fff;
+            color: #097fff;
+            display: grid;
+            place-items: center;
+            font-size: 2.5rem;
+            font-family: Fredoka One;
+            padding: 1rem;
+            border: solid #fff;
+            border-radius: 20px;
+            height: 10rem;
+            outline: none;
+
+            &:hover {
+                transform: scale(1.1);
+                transition: 0.7s;
+            }
+
+            @include respond(phone) {
+                font-size: 1.5rem;
+                height: 5rem;
+            }
+        }
+    }
+}
+
+footer {
+    min-height: 100vh;
+    max-height: auto;
+    background-color: #ff0000;
+    padding: 3rem;
+
+    @include respond(desk) {
+        height: auto;
+    }
+
+    .footOne {
+        height: 40vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        place-items: center;
+
+        h1 {
+            cursor: pointer;
+            font-size: 5rem;
+            color: #fff;
+
+            @include respond(phone) {
+                font-size: 2.5rem;
+            }
+        }
+
+        .socialIcon {
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+
+            .icon {
+                cursor: pointer;
+                font-size: 5rem;
+                color: #ffffff;
+
+                @include respond(phone) {
+                    font-size: 3.5rem;
+                }
+            }
+        }
+    }
+
+    .footTwo {
+        display: grid;
+        place-items: center;
+        height: calc(footer - footOne);
+
+        h1 {
+            cursor: pointer;
+            font-size: 3.5rem;
+            color: #fff;
+
+            @include respond(phone) {
+                font-size: 2.5rem;
+            }
+        }
+
+        .topics {
+            padding: 2rem;
+            width: 80%;
+            display: grid;
+            justify-content: center;
+            grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+
+            @include respond(phone) {
+                padding: 1rem;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+            }
+
+            li {
+                cursor: pointer;
+                color: #fff;
+                margin: 1.5rem;
+                list-style: none;
+                font-size: 2rem;
+
+                &:hover {
+                    transform: scale(1.1);
+                    transition: 0.7s;
+                }
+
+                @include respond(phone) {
+                    font-size: 1.5rem;
+                    margin: 1rem;
+                }
+            }
+        }
+    }
+
+    .footThree {
+        height: 10vh;
+        display: grid;
+        place-items: center;
+
+        h1 {
+            color: #fff;
+        }
+    }
 }
 
 // sass ends here.
